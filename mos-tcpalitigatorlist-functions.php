@@ -33,7 +33,7 @@ function mos_tcpalitigatorlist_admin_enqueue_scripts(){
 }
 add_action( 'admin_enqueue_scripts', 'mos_tcpalitigatorlist_admin_enqueue_scripts' );
 function mos_tcpalitigatorlist_enqueue_scripts(){
-	global $mos_tcpalitigatorlist_option;
+	global $mos_tcpalitigatorlist_options;
 	wp_enqueue_style( 'mos-tcpalitigatorlist', plugins_url( 'css/mos-tcpalitigatorlist.css', __FILE__ ) );
 	wp_enqueue_script( 'mos-tcpalitigatorlist-functions', plugins_url( 'js/mos-tcpalitigatorlist-functions.js', __FILE__ ), array('jquery') );
 	wp_enqueue_script( 'mos-tcpalitigatorlist', plugins_url( 'js/mos-tcpalitigatorlist.js', __FILE__ ), array('jquery') );
@@ -49,19 +49,20 @@ function mos_tcpalitigatorlist_ajax_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'mos_tcpalitigatorlist_ajax_scripts' );
 add_action( 'admin_enqueue_scripts', 'mos_tcpalitigatorlist_ajax_scripts' );
+
 function mos_tcpalitigatorlist_scripts() {
-	global $mos_tcpalitigatorlist_option;
-	if (@$mos_tcpalitigatorlist_option['mos_tcpalitigatorlist_css']) {
+	global $mos_tcpalitigatorlist_options;
+	if (@$mos_tcpalitigatorlist_options['mos_tcpalitigatorlist_css']) {
 		?>
 		<style>
-			<?php echo $mos_tcpalitigatorlist_option['mos_tcpalitigatorlist_css'] ?>
+			<?php echo $mos_tcpalitigatorlist_options['mos_tcpalitigatorlist_css'] ?>
 		</style>
 		<?php
 	}
-	if (@$mos_tcpalitigatorlist_option['mos_tcpalitigatorlist_js']) {
+	if (@$mos_tcpalitigatorlist_options['mos_tcpalitigatorlist_js']) {
 		?>
 		<style>
-			<?php echo $mos_tcpalitigatorlist_option['mos_tcpalitigatorlist_js'] ?>
+			<?php echo $mos_tcpalitigatorlist_options['mos_tcpalitigatorlist_js'] ?>
 		</style>
 		<?php
 	}
