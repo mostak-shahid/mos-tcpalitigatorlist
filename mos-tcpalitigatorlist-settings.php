@@ -42,7 +42,7 @@ function mos_tcpalitigatorlist_section_dash_start_cb( $args ) {
   global $mos_tcpalitigatorlist_options;
 	?>
 	<div id="mos-tcpalitigatorlist-dashboard" class="tab-con <?php if($data['active_tab'] == 'dashboard') echo 'active';?>">
-		<?php //var_dump($mos_tcpalitigatorlist_options) ?>
+		<?php var_dump($mos_tcpalitigatorlist_options) ?>
 		<p>Use this shortcode [mos-tcpalitigatorlist-form class=""]</p>
 
 	<?php
