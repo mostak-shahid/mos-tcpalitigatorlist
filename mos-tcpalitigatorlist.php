@@ -28,12 +28,12 @@ require_once ( plugin_dir_path( MOS_TCPALITIGATORLIST_FILE ) . 'mos-tcpalitigato
 require_once ( plugin_dir_path( MOS_TCPALITIGATORLIST_FILE ) . 'mos-tcpalitigatorlist-hooks.php' );
 //require_once ( plugin_dir_path( MOS_TCPALITIGATORLIST_FILE ) . 'custom-settings.php' );
 
-/*require_once('plugins/update/plugin-update-checker.php');
+require_once('plugins/update/plugin-update-checker.php');
 $pluginInit = Puc_v4_Factory::buildUpdateChecker(
 	'https://raw.githubusercontent.com/mostak-shahid/update/master/mos-tcpalitigatorlist.json',
 	MOS_TCPALITIGATORLIST_FILE,
 	'mos-tcpalitigatorlist'
-);*/
+);
 
 
 register_activation_hook(MOS_TCPALITIGATORLIST_FILE, 'mos_tcpalitigatorlist_activate');
