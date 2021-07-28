@@ -6,6 +6,7 @@ jQuery(document).ready(function($){
 		let form_data = $(this).serialize();
 		let phone = $(this).find('.phone').val();
 		let type = $(this).find('.type').val();
+        ths.find('.btn-mos-tcpalitigatorlist-submit').html('Searching...');
 		//console.log(form_data);
         $.ajax({
             url: ajax_obj.ajax_url, // or example_ajax_obj.ajaxurl if using on frontend
@@ -23,6 +24,7 @@ jQuery(document).ready(function($){
                 } else {
                     html += 'No data found';
                 }
+                ths.find('.btn-mos-tcpalitigatorlist-submit').html('Check');
                 ths.siblings('.result').html(html);
                 //$('.track-output').html(result);
             },
