@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
 		let form_data = $(this).serialize();
 		let phone = $(this).find('.phone').val();
 		let type = $(this).find('.type').val();
-        ths.find('.btn-mos-tcpalitigatorlist-submit').html('Searching...');
+        ths.find('.btn-mos-tcpalitigatorlist-submit').html('...');
         ths.siblings('.result').html(html).fadeOut();
 		//console.log(form_data);
         $.ajax({
