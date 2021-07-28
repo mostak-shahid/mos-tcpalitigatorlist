@@ -19,7 +19,7 @@ jQuery(document).ready(function($){
                 'type' : type,
             },
             success: function(result){
-                //console.log(result);
+                console.log(result);
                 if (result){
                     html += result;
                 } else {
@@ -27,7 +27,7 @@ jQuery(document).ready(function($){
                 }
                 ths.find('.btn-mos-tcpalitigatorlist-submit').html('Check');
                 ths.siblings('.result').html(html).fadeIn();
-                //$('.track-output').html(result);
+                $('.track-output').html(result);
             },
             error: function(errorThrown){
                 console.log(errorThrown);

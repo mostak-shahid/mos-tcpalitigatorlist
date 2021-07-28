@@ -23,6 +23,7 @@ function number_tracking_ajax_callback () {
     curl_close($ch);
     $response_array = json_decode($output,true);
     
-	echo json_encode($response_array['match'][$phone]['type']);
+	echo json_encode(($response_array['match'][$phone]['status'])?$response_array['match'][$phone]['status']:$response_array['match'][$phone]['type']);
+	//echo json_encode($response_array);
     exit; // required. to end AJAX request.
 }
